@@ -4,6 +4,7 @@ describe Product do
   describe "#title" do
     it { should validate_presence_of(:title) }
     it { should validate_uniqueness_of(:title) }
+    it { should ensure_length_of(:title).is_at_least(10) }
   end
 
   describe "#description" do
