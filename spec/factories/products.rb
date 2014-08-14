@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :product do
-    title "My Book Title"
+    sequence(:title) { |n| "My Book ##{ n }" }
     description "yyy"
     image_url "zzz.jpg"
     price 19.95
